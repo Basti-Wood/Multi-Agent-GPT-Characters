@@ -5,6 +5,10 @@ from rich import print
 import base64
 import time
 import json
+from dotenv import load_dotenv
+
+load_dotenv("api.env")
+
 
 class OpenAiManager:
     
@@ -39,7 +43,7 @@ class OpenAiManager:
             with open(self.chat_history_backup, 'w') as file:
                 json.dump(self.chat_history, file)
 
-    def num_tokens_from_messages(self, messages, model='gpt-4o'):
+    def num_tokens_from_messages(self, messages, model='gpt-4'):
         """Returns the number of tokens used by a list of messages.
         The code below is an adaptation of this text-only version: https://platform.openai.com/docs/guides/chat/managing-tokens 
 

@@ -271,17 +271,17 @@ if __name__ == '__main__':
     all_agents = []
 
     # Agent 1
-    agent1 = Agent("OSWALD", 1, "Audio Move - Wario Pepper", all_agents, VIDEOGAME_AGENT_1, "Dougsworth")
+    agent1 = Agent("Callum", 1, "Audio Move - Wario Pepper", all_agents, VIDEOGAME_AGENT_1, "Callum")
     agent1_thread = threading.Thread(target=start_bot, args=(agent1,))
     agent1_thread.start()
 
     # Agent 2
-    agent2 = Agent("TONY KING OF NEW YORK", 2, "Audio Move - Waluigi Pepper", all_agents, VIDEOGAME_AGENT_2, "Tony Emperor of New York")
+    agent2 = Agent("Sarah", 2, "Audio Move - Waluigi Pepper", all_agents, VIDEOGAME_AGENT_2, "Sarah")
     agent2_thread = threading.Thread(target=start_bot, args=(agent2,))
     agent2_thread.start()
 
     # Agent 3
-    agent3 = Agent("VICTORIA", 3, "Audio Move - Gamer Pepper", all_agents, VIDEOGAME_AGENT_3, "Victoria")
+    agent3 = Agent("Charlotte", 3, "Audio Move - Gamer Pepper", all_agents, VIDEOGAME_AGENT_3, "Charlotte")
     agent3_thread = threading.Thread(target=start_bot, args=(agent3,))
     agent3_thread.start()
 
@@ -289,7 +289,7 @@ if __name__ == '__main__':
     all_agents.append(agent2)
     all_agents.append(agent3)
 
-    # Human thread
+    # Human thread1
     human = Human("DOUGDOUG", all_agents)
     human_thread = threading.Thread(target=start_bot, args=(human,))
     human_thread.start()
